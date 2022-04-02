@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Raúl González Martín<Raulglezmartin@gmail.com>
+ * @author Raúl González Martín / Alberto Hernández Medina 
  */
 public class EsIespuertodelacruzRgmAhmCalculadoraFX extends Application {
     

@@ -7,7 +7,7 @@ package es.iespuertodelacruz.rgm.ahm.calculadorafx.model;
 
 /**
  *
- * @author daw
+ * @author Raúl Gónzález Martín / Alberto Hernández Medina
  */
 interface OprablePF<T> {
 

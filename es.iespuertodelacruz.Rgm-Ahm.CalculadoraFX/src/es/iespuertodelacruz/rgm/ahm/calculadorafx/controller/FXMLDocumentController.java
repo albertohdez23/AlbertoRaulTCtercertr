@@ -14,7 +14,7 @@ import javafx.scene.control.Label;
 
 /**
  *
- * @author Raúl González Martín<Raulglezmartin@gmail.com>
+ * @author Raúl González Martín / Alberto Hernández Medina 
  */
 public class FXMLDocumentController implements Initializable {
     

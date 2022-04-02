@@ -9,31 +9,47 @@ import java.util.LinkedList;
 
 /**
  * Funcion de la calculadora que implementa la interfaz Operable
- * @author Alberto Hernández Medina
+ * @author Alberto Hernández Medina / Raúl González Martín
  * @param <T> tipo de dato con el que opera a calculadora
  */
-public class CalculadoraPF<T extends OprablePF<T>> {
+class CalculadoraPF<T extends OprablePF<T>> {
 
     LinkedList<T> listaCalculos;
-
+    /**
+     * Costructor por defecto
+     */
     public CalculadoraPF() {
         this.listaCalculos = new LinkedList<>();
     }
 
+    /**
+     * Metodo para obtener el historial
+     * @return 
+     */
     public LinkedList<T> getListaCalculos() {
         return listaCalculos;
     }
 
+    /**
+     * Metodo para modificar el historial
+     * @param listaCalculos 
+     */
     public void setListaCalculos(LinkedList<T> listaCalculos) {
         this.listaCalculos = listaCalculos;
     }
 
+    /**
+     * Metodo para añadir los numeros a operar de la clase
+     * @param operando 
+     */
     public void addOperando(T operando) {
-
         listaCalculos.push(operando);
-
     }
 
+    /**
+     * Metodo donde se compara el operador para saber la operación a realizar
+     * @param operador 
+     */
     public void operar(String operador) {
 
         T operador1;
@@ -76,6 +92,10 @@ public class CalculadoraPF<T extends OprablePF<T>> {
 
     }
 
+    /**
+     * Metodo que devuelve el resultado
+     * @return resultado de la operacion
+     */
     public OprablePF resultado() {
 
         OprablePF resultado = listaCalculos.pop();
