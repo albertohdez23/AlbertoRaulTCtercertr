@@ -12,7 +12,7 @@ import java.util.LinkedList;
  * @author Alberto Hernández Medina / Raúl González Martín
  * @param <T> tipo de dato con el que opera a calculadora
  */
-class CalculadoraPF<T extends OperablePF<T>> {
+public class CalculadoraPF<T extends OperablePF<T>> {
 
     LinkedList<T> listaCalculos;
     String signo;
@@ -83,7 +83,7 @@ class CalculadoraPF<T extends OperablePF<T>> {
      * Metodo que devuelve el resultado
      * @return resultado de la operacion
      */
-    public T resultado () {
-      return listaCalculos.element();  
+    public String getResultado () {
+      return listaCalculos.element()+"";  
     }
 }
