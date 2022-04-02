@@ -9,7 +9,7 @@ package es.iespuertodelacruz.rgm.ahm.calculadorafx.model;
  *
  * @author Raúl Gónzález Martín / Alberto Hernández Medina
  */
-interface OprablePF<T> {
+interface OperablePF<T> {
 
     T suma(T objeto);
 

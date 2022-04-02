@@ -12,9 +12,10 @@ import java.util.LinkedList;
  * @author Alberto Hernández Medina / Raúl González Martín
  * @param <T> tipo de dato con el que opera a calculadora
  */
-class CalculadoraPF<T extends OprablePF<T>> {
+class CalculadoraPF<T extends OperablePF<T>> {
 
     LinkedList<T> listaCalculos;
+    String signo;
     /**
      * Costructor por defecto
      */
@@ -22,6 +23,39 @@ class CalculadoraPF<T extends OprablePF<T>> {
         this.listaCalculos = new LinkedList<>();
     }
 
+    /**
+     * Metodo para añadir los numeros a operar de la clase
+     * @param operando 
+     */
+    public void addOperando(T operando) {
+        listaCalculos.push(operando);
+    }
+
+    /**
+     * añade los signos de la ecuacion
+     * @param signo 
+     */
+    public void operar(String signo) {
+        T operando1 = listaCalculos.pop();
+        T operando2 = listaCalculos.pop();
+        
+        switch (signo){
+            case"+":
+                listaCalculos.push(operando1.suma(operando2));
+                break;
+            case"-":
+                listaCalculos.push(operando1.resta(operando2));
+                break;
+            case"*":
+                listaCalculos.push(operando1.multiplicacion(operando2));
+                break;
+            case"/":
+                listaCalculos.push(operando1.division(operando2));
+                break;   
+        }
+        
+    }
+    
     /**
      * Metodo para obtener el historial
      * @return 
@@ -37,68 +71,19 @@ class CalculadoraPF<T extends OprablePF<T>> {
     public void setListaCalculos(LinkedList<T> listaCalculos) {
         this.listaCalculos = listaCalculos;
     }
-
+    
     /**
-     * Metodo para añadir los numeros a operar de la clase
-     * @param operando 
+     * Metodo que borra la base de datos de la calculadora
      */
-    public void addOperando(T operando) {
-        listaCalculos.push(operando);
-    }
-
-    /**
-     * Metodo donde se compara el operador para saber la operación a realizar
-     * @param operador 
-     */
-    public void operar(String operador) {
-
-        T operador1;
-        T operador2;
-        T resultado;
-
-        switch (operador) {
-            case "+":
-                operador1 = listaCalculos.pop();
-                operador2 = listaCalculos.pop();
-
-                resultado = operador2.suma(operador1);
-                listaCalculos.push(resultado);
-                break;
-
-            case "-":
-                operador1 = listaCalculos.pop();
-                operador2 = listaCalculos.pop();
-
-                resultado = operador2.resta(operador1);
-                listaCalculos.push(resultado);
-                break;
-
-            case "*":
-                operador1 = listaCalculos.pop();
-                operador2 = listaCalculos.pop();
-
-                resultado = operador2.multiplicacion(operador1);
-                listaCalculos.push(resultado);
-                break;
-
-            case "/":
-                operador1 = listaCalculos.pop();
-                operador2 = listaCalculos.pop();
-
-                resultado = operador2.division(operador1);
-                listaCalculos.push(resultado);
-                break;
-        }
-
+    private void limpiar() {
+        listaCalculos.clear();
     }
 
     /**
      * Metodo que devuelve el resultado
      * @return resultado de la operacion
      */
-    public OprablePF resultado() {
-
-        OprablePF resultado = listaCalculos.pop();
-        return resultado;
+    public T resultado () {
+      return listaCalculos.element();  
     }
 }

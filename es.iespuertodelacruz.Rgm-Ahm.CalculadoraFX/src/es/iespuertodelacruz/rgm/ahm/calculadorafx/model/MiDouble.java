@@ -27,5 +27,38 @@ public class MiDouble implements OperablePF<MiDouble>{
         this.num = num;
     }
     
+    @Override
+    public MiDouble suma(MiDouble objeto) {
+        double sumNum = this.num + objeto.num;
+        return new MiDouble(sumNum);
+    }
+
+    @Override
+    public MiDouble resta(MiDouble objeto) {
+        double resNum = this.num - objeto.num;
+        return new MiDouble(resNum);
+    }
+
+    @Override
+    public MiDouble multiplicacion(MiDouble objeto) {
+        double proNum = this.num * objeto.num;
+        return new MiDouble(proNum);
+    }
+
+    @Override
+    public MiDouble division(MiDouble objeto) {
+        double divNum = this.num / objeto.num;
+        return new MiDouble(divNum);
+    }
+
+    public double toDouble(){
+        return num;
+    }
+
+    @Override
+    public String toString() {
+        return  ""+num ;
+    }
+    
     
 }
