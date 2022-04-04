@@ -24,10 +24,66 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML private TextArea txtResultado;
     public CalculadoraPF calc;
+    @FXML
+    private Button btn0;
+    @FXML
+    private Button btn1;
+    @FXML
+    private Button btn2;
+    @FXML
+    private Button btn3;
+    @FXML
+    private Button btn4;
+    @FXML
+    private Button btn5;
+    @FXML
+    private Button btn6;
+    @FXML
+    private Button btn7;
+    @FXML
+    private Button btn8;
+    @FXML
+    private Button btn9;
+    @FXML
+    private Button btnComa;
+    @FXML
+    private Button btnIgual;
+    @FXML
+    private Button btnResta;
+    @FXML
+    private Button btnSuma;
+    @FXML
+    private Button btnDivision;
+    @FXML
+    private Button btnProducto;
+    @FXML
+    private Button btnHistorial;
+    @FXML
+    private Button btnBorrar;
+    @FXML
+    private Button btnHistorial1;
+    @FXML
+    private Button btnComa1;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         calc = new CalculadoraPF();
     }  
+
+    @FXML
+    private void operando(ActionEvent event) {
+    }
+
+    @FXML
+    private void igual(ActionEvent event) {
+    }
+
+    @FXML
+    private void operador(ActionEvent event) {
+    }
+
+    @FXML
+    private void limpiar(ActionEvent event) {
+    }
     
 }
