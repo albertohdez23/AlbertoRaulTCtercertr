@@ -14,7 +14,7 @@ import java.util.LinkedList;
  */
 public class CalculadoraPF<T extends OperablePF<T>> {
 
-    LinkedList<T> listaCalculos;
+    LinkedList <MiDouble> listaCalculos;
     String signo;
     /**
      * Costructor por defecto
@@ -25,10 +25,26 @@ public class CalculadoraPF<T extends OperablePF<T>> {
 
     /**
      * Metodo para añadir los numeros a operar de la clase
-     * @param operando 
+     * @param operacion cadena de String con la operacion
      */
-    public void addOperando(T operando) {
-        listaCalculos.push(operando);
+    public void addOperacion(String operacion){
+        
+        String [] splitOperacion = operacion.split(" ");
+        
+        for (String string : splitOperacion) {   
+            
+            if(string.equals("-") || string.equals("+") || string.equals("*") || string.equals("/") ){
+                
+                operar(string);
+                
+            }else{
+                
+                MiDouble num = new MiDouble(Double.parseDouble(string));
+                listaCalculos.push(num);
+                
+            }
+        }
+        
     }
 
     /**
@@ -36,8 +52,8 @@ public class CalculadoraPF<T extends OperablePF<T>> {
      * @param signo 
      */
     public void operar(String signo) {
-        T operando1 = listaCalculos.pop();
-        T operando2 = listaCalculos.pop();
+        MiDouble operando1 = listaCalculos.pop();
+        MiDouble operando2 = listaCalculos.pop();
         
         switch (signo){
             case"+":
@@ -60,7 +76,7 @@ public class CalculadoraPF<T extends OperablePF<T>> {
      * Metodo para obtener el historial
      * @return 
      */
-    public LinkedList<T> getListaCalculos() {
+    public LinkedList<MiDouble> getListaCalculos() {
         return listaCalculos;
     }
 
@@ -68,7 +84,7 @@ public class CalculadoraPF<T extends OperablePF<T>> {
      * Metodo para modificar el historial
      * @param listaCalculos 
      */
-    public void setListaCalculos(LinkedList<T> listaCalculos) {
+    public void setListaCalculos(LinkedList<MiDouble> listaCalculos) {
         this.listaCalculos = listaCalculos;
     }
     

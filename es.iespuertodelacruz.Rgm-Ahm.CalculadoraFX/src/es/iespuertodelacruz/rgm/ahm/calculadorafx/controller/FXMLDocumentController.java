@@ -68,10 +68,11 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         calc = new CalculadoraPF();
+        CalculadoraPF<MiDouble> calculadoramd = new CalculadoraPF<>();
     }  
 
     @FXML
-    private void operando(ActionEvent event) {
+    private void operando(ActionEvent event) {     
     }
 
     @FXML
