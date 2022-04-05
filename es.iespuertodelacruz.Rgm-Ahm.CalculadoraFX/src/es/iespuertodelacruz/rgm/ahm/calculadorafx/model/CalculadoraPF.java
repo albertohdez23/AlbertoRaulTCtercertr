@@ -13,7 +13,9 @@ import java.util.LinkedList;
  * @param <T> tipo de dato con el que opera a calculadora
  */
 public class CalculadoraPF<T extends OperablePF<T>> {
-
+    
+    String M1;
+    String M2;
     LinkedList <MiDouble> listaCalculos;
     String signo;
     /**
@@ -21,6 +23,8 @@ public class CalculadoraPF<T extends OperablePF<T>> {
      */
     public CalculadoraPF() {
         this.listaCalculos = new LinkedList<>();
+        M1 = null;
+        M2 = null;
     }
 
     /**
@@ -94,12 +98,26 @@ public class CalculadoraPF<T extends OperablePF<T>> {
     private void limpiar() {
         listaCalculos.clear();
     }
+    
+    public void limpiarMemoria1(){
+        M1 = null;
+    }
+    
+    public void limpiarMemoria2(){
+        M2 = null;
+    }
 
     /**
      * Metodo que devuelve el resultado
      * @return resultado de la operacion
      */
     public String getResultado () {
-      return listaCalculos.element()+"";  
+        String resultado = listaCalculos.element()+""; 
+        if (M1 == null){
+            M1 = resultado;
+        }else if (M2 == null){
+            M2 = resultado;
+        }
+        return resultado;
     }
 }
