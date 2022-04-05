@@ -13,16 +13,16 @@ public class CalculadoraPostfijo {
 
     public static void main(String[] args) {
 
-        CalculadoraPF<MiDouble> calculadoramd = new CalculadoraPF<MiDouble>();
+        CalculadoraPF<MiDouble> calculadoramd = new CalculadoraPF<>();
         
         
-        String cadena = "5 1 2 + 4 * + 3 -";
+        String cadena = "2 3 5 + *";
         
         calculadoramd.addOperacion(cadena); /*Boton oper*/
         
         System.out.println(calculadoramd.getResultado()); /*boton igual*/  
         
-        cadena += "5 1 +";
+        cadena = "5 1 +";
         
         calculadoramd.addOperacion(cadena);
         
