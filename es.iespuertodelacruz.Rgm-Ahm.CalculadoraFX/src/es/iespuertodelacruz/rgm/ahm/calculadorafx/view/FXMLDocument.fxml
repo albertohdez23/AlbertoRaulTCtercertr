@@ -28,37 +28,37 @@
             <RowConstraints maxHeight="80.0" minHeight="2.0" prefHeight="2.0" valignment="CENTER" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-            <Button fx:id="btn0" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="0" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-            <Button fx:id="btn1" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="1" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <Button fx:id="btn2" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="2" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <Button fx:id="btn3" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="3" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <Button fx:id="btn4" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="4" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Button fx:id="btn5" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="5" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Button fx:id="btn6" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="6" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Button fx:id="btn7" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="7" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Button fx:id="btn8" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="8" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Button fx:id="btn9" alignment="CENTER" mnemonicParsing="false" onAction="#operando" prefHeight="44.0" prefWidth="62.0" text="9" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Button fx:id="btnComa" alignment="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="62.0" text="," textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="btn0" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="0" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="btn1" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="1" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="btn2" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="2" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="btn3" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="3" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="btn4" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="4" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="btn5" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="5" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="btn6" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="6" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="btn7" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="7" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="btn8" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="8" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="btn9" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="9" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="btnPunto" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="." textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
             <Button fx:id="btnIgual" alignment="CENTER" mnemonicParsing="false" onAction="#igual" prefHeight="44.0" prefWidth="62.0" style="-fx-background-color: #40CFFF;" text="=" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-            <Button fx:id="btnResta" alignment="CENTER" mnemonicParsing="false" onAction="#operador" prefHeight="44.0" prefWidth="62.0" text="-" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <Button fx:id="btnResta" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="-" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <font>
                   <Font size="22.0" />
                </font>
             </Button>
-            <Button fx:id="btnSuma" alignment="CENTER" mnemonicParsing="false" onAction="#operador" prefHeight="44.0" prefWidth="62.0" text="+" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <Button fx:id="btnDivision" alignment="CENTER" mnemonicParsing="false" onAction="#operador" prefHeight="44.0" prefWidth="62.0" text="/" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Button fx:id="btnProducto" alignment="CENTER" mnemonicParsing="false" onAction="#operador" prefHeight="44.0" prefWidth="62.0" text="*" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Button fx:id="btnHistorial" alignment="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="62.0" text="M1" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="btnSuma" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="+" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="btnDivision" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="/" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="btnProducto" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="*" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="btnMemoria1" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="M1" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Button fx:id="btnBorrar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#limpiar" prefHeight="44.0" prefWidth="62.0" text="C" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor></Button>
-            <TextArea fx:id="txtResultado" prefHeight="76.0" prefWidth="145.0" text="0" GridPane.columnSpan="4">
+            <TextArea fx:id="txtResultado" prefHeight="76.0" prefWidth="145.0" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                </GridPane.margin></TextArea>
-            <Button fx:id="btnHistorial1" alignment="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="62.0" text="M2" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Button fx:id="btnComa1" alignment="CENTER" mnemonicParsing="false" prefHeight="62.0" prefWidth="44.0" rotate="-90.0" text="[" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="btnMemoria2" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="44.0" prefWidth="62.0" text="M2" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="btnSpace" alignment="CENTER" mnemonicParsing="false" onAction="#operar" prefHeight="62.0" prefWidth="44.0" rotate="-90.0" text="[" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
     </children>

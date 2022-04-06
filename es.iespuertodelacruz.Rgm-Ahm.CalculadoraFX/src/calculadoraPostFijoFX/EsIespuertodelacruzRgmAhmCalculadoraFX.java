@@ -23,6 +23,8 @@ public class EsIespuertodelacruzRgmAhmCalculadoraFX extends Application {
         
         Scene scene = new Scene(root);
         
+        stage.setTitle("Calculadora");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }

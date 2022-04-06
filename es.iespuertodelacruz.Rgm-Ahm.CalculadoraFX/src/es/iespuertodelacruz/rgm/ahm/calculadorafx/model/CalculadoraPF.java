@@ -14,10 +14,12 @@ import java.util.LinkedList;
  */
 public class CalculadoraPF<T extends OperablePF<T>> {
     
-    String M1;
+    public String M1;
     String M2;
     LinkedList <MiDouble> listaCalculos;
-    String signo;
+    public String cadena = "";
+    public boolean limpiar;
+    
     /**
      * Costructor por defecto
      */
@@ -25,6 +27,7 @@ public class CalculadoraPF<T extends OperablePF<T>> {
         this.listaCalculos = new LinkedList<>();
         M1 = null;
         M2 = null;
+        limpiar = false;
     }
 
     /**
@@ -56,8 +59,8 @@ public class CalculadoraPF<T extends OperablePF<T>> {
      * @param signo 
      */
     public void operar(String signo) {
-        MiDouble operando1 = listaCalculos.pop();
         MiDouble operando2 = listaCalculos.pop();
+        MiDouble operando1 = listaCalculos.pop();
         
         switch (signo){
             case"+":
@@ -95,7 +98,7 @@ public class CalculadoraPF<T extends OperablePF<T>> {
     /**
      * Metodo que borra la base de datos de la calculadora
      */
-    private void limpiar() {
+    public void limpiar() {
         listaCalculos.clear();
     }
     
@@ -106,7 +109,23 @@ public class CalculadoraPF<T extends OperablePF<T>> {
     public void limpiarMemoria2(){
         M2 = null;
     }
-
+    
+    public String imprimirM1(){
+        if (M1 != null){
+            return M1;
+        }else{
+            return "";
+        }
+    }
+    
+    public String imprimirM2(){
+        if (M2 != null){
+            return M2;
+        }else{
+            return "";
+        }
+    }
+    
     /**
      * Metodo que devuelve el resultado
      * @return resultado de la operacion
