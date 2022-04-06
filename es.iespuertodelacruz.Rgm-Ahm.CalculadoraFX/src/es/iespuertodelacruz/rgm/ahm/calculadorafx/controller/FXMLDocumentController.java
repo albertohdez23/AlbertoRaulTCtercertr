@@ -72,7 +72,7 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        calc = new CalculadoraPF<MiDouble>();
+        calc = new CalculadoraPF<>();
     }  
 
     @FXML
@@ -85,14 +85,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void limpiar(ActionEvent event) {
         Button btn = (Button)event.getSource();
-        if (calc.limpiar){
-            if (btn == btnBorrar){
-                txtResultado.setText("");
-                calc.limpiar = false;
-            }
-        }else{
-            calc.limpiar = true;
-        }
+        txtResultado.setText("");
     }
 
     @FXML
@@ -120,6 +113,16 @@ public class FXMLDocumentController implements Initializable {
             }else {
                 calc.limpiar = false;
             }
+        }
+    }
+
+    @FXML
+    private void limpiarMem(ActionEvent event) {
+        Button btn = (Button)event.getSource();
+        if (calc.limpiar) {
+            calc.limpiar = false;
+        } else {
+            calc.limpiar = true;
         }
     }
 }
