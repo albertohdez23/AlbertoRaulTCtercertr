@@ -37,6 +37,39 @@ public class FXMLDocumentController implements Initializable {
     
     public CalculadoraPF calc;
     
+    @FXML
+    private Button btn0;
+    @FXML
+    private Button btn1;
+    @FXML
+    private Button btn2;
+    @FXML
+    private Button btn3;
+    @FXML
+    private Button btn4;
+    @FXML
+    private Button btn5;
+    @FXML
+    private Button btn6;
+    @FXML
+    private Button btn7;
+    @FXML
+    private Button btn8;
+    @FXML
+    private Button btn9;
+    @FXML
+    private Button btnIgual;
+    @FXML
+    private Button btnResta;
+    @FXML
+    private Button btnSuma;
+    @FXML
+    private Button btnDivision;
+    @FXML
+    private Button btnProducto;
+    @FXML
+    private Button btnShift;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         calc = new CalculadoraPF<MiDouble>();
