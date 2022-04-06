@@ -14,10 +14,9 @@ import java.util.LinkedList;
  */
 public class CalculadoraPF<T extends OperablePF<T>> {
     
-    public String M1;
+    String M1;
     String M2;
     LinkedList <MiDouble> listaCalculos;
-    public String cadena = "";
     public boolean limpiar;
     
     /**
