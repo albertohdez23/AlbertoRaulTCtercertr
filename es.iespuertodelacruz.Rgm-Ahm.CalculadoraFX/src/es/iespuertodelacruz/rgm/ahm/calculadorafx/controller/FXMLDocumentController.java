@@ -5,7 +5,6 @@
  */
 package es.iespuertodelacruz.rgm.ahm.calculadorafx.controller;
 
-import es.iespuertodelacruz.rgm.ahm.calculadorafx.model.MiDouble;
 import es.iespuertodelacruz.rgm.ahm.calculadorafx.model.CalculadoraPF;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,8 +12,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.GridPane;
 
 /**
  *
@@ -69,6 +70,8 @@ public class FXMLDocumentController implements Initializable {
     private Button btnProducto;
     @FXML
     private Button btnShift;
+    @FXML
+    private GridPane gridPane;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -77,7 +80,11 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void igual(ActionEvent event) {
-        calc.addOperacion(txtResultado.getText());
+        try{
+            calc.addOperacion(txtResultado.getText());
+        }catch(Exception ex){
+            txtResultado.setText("Syntax Error");
+        }
         String resultado = calc.getResultado();
         txtResultado.setText(resultado);
     }
@@ -85,6 +92,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void limpiar(ActionEvent event) {
         Button btn = (Button)event.getSource();
+        calc.limpiar();
         txtResultado.setText("");
     }
 
@@ -123,6 +131,21 @@ public class FXMLDocumentController implements Initializable {
             calc.limpiar = false;
         } else {
             calc.limpiar = true;
+        }
+    }
+
+    @FXML
+    private void igualTeclado(KeyEvent event) {
+        KeyCode kc = event.getCode();
+
+        if (kc == KeyCode.INSERT) {
+            try {
+                calc.addOperacion(txtResultado.getText());
+            } catch (Exception ex) {
+                txtResultado.setText("Syntax Error");
+            }
+            String resultado = calc.getResultado();
+            txtResultado.setText(resultado);
         }
     }
 }
