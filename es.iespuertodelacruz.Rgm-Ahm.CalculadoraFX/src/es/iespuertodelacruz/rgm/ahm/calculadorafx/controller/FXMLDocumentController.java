@@ -5,7 +5,6 @@
  */
 package es.iespuertodelacruz.rgm.ahm.calculadorafx.controller;
 
-import es.iespuertodelacruz.rgm.ahm.calculadorafx.model.MiDouble;
 import es.iespuertodelacruz.rgm.ahm.calculadorafx.model.CalculadoraPF;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,8 +12,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.GridPane;
 
 /**
  *
@@ -37,14 +38,53 @@ public class FXMLDocumentController implements Initializable {
     
     public CalculadoraPF calc;
     
+    @FXML
+    private Button btn0;
+    @FXML
+    private Button btn1;
+    @FXML
+    private Button btn2;
+    @FXML
+    private Button btn3;
+    @FXML
+    private Button btn4;
+    @FXML
+    private Button btn5;
+    @FXML
+    private Button btn6;
+    @FXML
+    private Button btn7;
+    @FXML
+    private Button btn8;
+    @FXML
+    private Button btn9;
+    @FXML
+    private Button btnIgual;
+    @FXML
+    private Button btnResta;
+    @FXML
+    private Button btnSuma;
+    @FXML
+    private Button btnDivision;
+    @FXML
+    private Button btnProducto;
+    @FXML
+    private Button btnShift;
+    @FXML
+    private GridPane gridPane;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        calc = new CalculadoraPF<MiDouble>();
+        calc = new CalculadoraPF<>();
     }  
 
     @FXML
     private void igual(ActionEvent event) {
-        calc.addOperacion(txtResultado.getText());
+        try{
+            calc.addOperacion(txtResultado.getText());
+        }catch(Exception ex){
+            txtResultado.setText("Syntax Error");
+        }
         String resultado = calc.getResultado();
         txtResultado.setText(resultado);
     }
@@ -52,14 +92,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void limpiar(ActionEvent event) {
         Button btn = (Button)event.getSource();
-        if (calc.limpiar){
-            if (btn == btnBorrar){
-                txtResultado.setText("");
-                calc.limpiar = false;
-            }
-        }else{
-            calc.limpiar = true;
-        }
+        calc.limpiar();
+        txtResultado.setText("");
     }
 
     @FXML
@@ -87,6 +121,31 @@ public class FXMLDocumentController implements Initializable {
             }else {
                 calc.limpiar = false;
             }
+        }
+    }
+
+    @FXML
+    private void limpiarMem(ActionEvent event) {
+        Button btn = (Button)event.getSource();
+        if (calc.limpiar) {
+            calc.limpiar = false;
+        } else {
+            calc.limpiar = true;
+        }
+    }
+
+    @FXML
+    private void igualTeclado(KeyEvent event) {
+        KeyCode kc = event.getCode();
+
+        if (kc == KeyCode.INSERT) {
+            try {
+                calc.addOperacion(txtResultado.getText());
+            } catch (Exception ex) {
+                txtResultado.setText("Syntax Error");
+            }
+            String resultado = calc.getResultado();
+            txtResultado.setText(resultado);
         }
     }
 }
