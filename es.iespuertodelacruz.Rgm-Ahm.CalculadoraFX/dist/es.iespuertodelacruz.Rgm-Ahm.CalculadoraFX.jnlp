@@ -8,11 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-<<<<<<< HEAD
-    <jar href="es.iespuertodelacruz.Rgm-Ahm.CalculadoraFX.jar" size="10714" download="eager" />
-=======
-    <jar href="es.iespuertodelacruz.Rgm-Ahm.CalculadoraFX.jar" size="10574" download="eager" />
->>>>>>> feature04
+    <jar href="es.iespuertodelacruz.Rgm-Ahm.CalculadoraFX.jar" size="11239" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="es.iespuertodelacruz.Rgm-Ahm.CalculadoraFX" >
     <param name="requiredFXVersion" value="8.0+"/>
